@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* 영문에 적용할 폰트 */
+.font-en {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  /* 밑줄 제거 */
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
+  padding: 100px 0 30px;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+
+}
+header .inner {
+  display: flex;
+  height: 60px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .inner .logo {
+  font-size: 28px;
+}
+header .inner ul {
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+header .inner ul li + li {
+  width: 100px;
+  margin-left: 20px;
+}
+
+/* VISUAL */
+.visual {
+  padding-top: 60px;
+  width: 100%;
+  background-color: #000;
+}
+
+
+/* ABOUT */
+.about-wrapper {
+  padding: 0 40px;
+  display: flex;
+}
+.about-wrapper .profil {
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about-wrapper .profil img {
+  width: 100%;
+}
+.about-wrapper .edu {
+  margin: 315px 0 0 25px;
+  font-weight: bold;
+  height: 188px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-wrapper .edu h2 {
+  font-size: 24px;
+}
+.about-wrapper .edu h3 {
+  font-size: 20px;
+  
+}
+.about-wrapper .edu ul {
+  font-size: 18px;
+}
+
+/* SKILL */
+.skillList{
+
+}
+.skillList ul {
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skillList ul li {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.skillList ul li:last-child{
+  background-color: yellow;
+  text-align: center;
+  line-height: 100px;
+  font-size: 28px;
+  font-weight: 900;
+}
+.skillList ul li img{
+  width: 100%;
+}
+
