@@ -77,8 +77,11 @@ header .inner ul li + li {
 
 /* ABOUT */
 .about-wrapper {
+  width: 90%;
+  margin: 0 auto;
   padding: 0 40px;
   display: flex;
+  justify-content: space-between;
 }
 .about-wrapper .profil {
   width: 500px;
@@ -89,15 +92,9 @@ header .inner ul li + li {
   width: 100%;
 }
 .about-wrapper .edu {
-  margin: 315px 0 0 25px;
   font-weight: bold;
-  height: 188px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.about-wrapper .edu h2 {
-  font-size: 24px;
+  flex-direction: column-reverse;
 }
 .about-wrapper .edu h3 {
   font-size: 20px;
@@ -105,33 +102,71 @@ header .inner ul li + li {
 }
 .about-wrapper .edu ul {
   font-size: 18px;
+  margin-top: 20px;
 }
+.about-wrapper .edu div {
+  display: flex;
+  margin-top: 15px;
+}
+.about-wrapper .edu span {
+  width: 25%;
+  border-radius: 15px;
+  margin: 0 5px;
+  text-align: center;
+  background-color: #dff7fd;
+}
+.about-wrapper .edu span:hover {
+  background-color: lightblue;
+}
+
 
 /* SKILL */
 .skillList{
-
+  width: 100%;
 }
 .skillList ul {
-  width: 600px;
+  width: 80%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .skillList ul li {
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
+  width: 100%;
+}
+.skillList ul li h5{
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.skillList ul li .skill-text {
+  display: flex;
+}
+.skillList ul li .skill-text img{
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+}
+.ability-bar {
+  width: 100%;
+  background-color: #eee;
+  opacity: 0.5;
+  border-radius: 3px;
+  border: 1px solid #111;
+  display: flex;
+
+}
+.ability-bar .ability-box {
+  width: 100%;
   overflow: hidden;
 }
-.skillList ul li:last-child{
-  background-color: yellow;
-  text-align: center;
-  line-height: 100px;
-  font-size: 28px;
-  font-weight: 900;
+.ability-bar .ability-box .ability-percent {
+  width: 50%;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: row-reverse;
+  transform: translateX(-500px);
+  transition: 1s;
 }
-.skillList ul li img{
-  width: 100%;
+.ability-bar.show .ability-box .ability-percent {
+  transform: translateX(0);
 }
 
