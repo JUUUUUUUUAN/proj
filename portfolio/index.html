@@ -17,6 +17,9 @@
   <!-- ScrollMagic -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <!-- main.css -->
   <link rel="stylesheet" href="css/main.css">
 
@@ -34,12 +37,17 @@
       <!-- 메뉴 -->
       <nav class="font-en">
         <ul>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">SKILL</a></li>
-          <li><a href="#">PROJECT</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skill">SKILL</a></li>
+          <li><a href="#project">PROJECT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
+
+      <!-- 햄버거 버튼 -->
+      <a href="javascript:void(0)" class="btn-hamburger">
+        <span class="material-symbols-outlined">menu</span>
+      </a>
     </div>
   </header>
 
@@ -51,7 +59,7 @@
     </div>
   </section>
 
-  <section class="about">
+  <section id="about" class="about">
     <div class="inner">
       <h1 class="title">ABOUT</h1>
       <div class="about-wrapper">
@@ -74,71 +82,138 @@
     </div>
   </section>
 
-  <section class="skill">
+  <section id="skill" class="skill">
     <div class="inner">
       <h1 class="title">SKILL</h1>
       <div class="skillList">
         <ul>
           <li>
-            <h5>HTML</h5>
             <div class="skill-text">
               <img src="image/html.png" alt="html">
-              <ul>
-                <li>
-                  <p>웹 표준화</p>
-                  <div class="ability-bar">
-                    <div class="ability-box">
-                      <div class="ability-percent">
-                        <span>50%</span>
-                      </div>
-                    </div>
+              <div class="ability-bar">
+                <div class="ability-box">
+                  <div class="ability-percent html">
+                    <span>50%</span>
                   </div>
-                </li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-          <!-- </li>
-          <li>
-            <img src="image/css.png" alt="css">
-            <div class="skill-text">
-              <h5>CSS</h5>
-              <p>Lorem ipsum dolor sit amet, 
-              consectetur adipisicing elit. 
-              Totam exercitationem sit incidunt,
-              Lorem ipsum dolor sit amet, 
-              consectetur adipisicing elit.
-              Laudantium iure aperiam odit, 
-              quaerat repellendus unde, 
-              nisi ut veniam esse commodi dolorem quibusdam deleniti illum voluptatibus ipsam! 
-              Obcaecati error eveniet ut?</p>
+                </div>
+              </div>
             </div>
           </li>
           <li>
-            <img src="image/js.png" alt="js">
             <div class="skill-text">
-              <h5>Java Script</h5>
-              <p>Lorem ipsum dolor sit amet, 
-              consectetur adipisicing elit. 
-              Totam exercitationem sit incidunt,
-              Lorem ipsum dolor sit amet, 
-              consectetur adipisicing elit.
-              Laudantium iure aperiam odit, 
-              quaerat repellendus unde, 
-              nisi ut veniam esse commodi dolorem quibusdam deleniti illum voluptatibus ipsam! 
-              Obcaecati error eveniet ut?</p>
+              <img src="image/css.png" alt="css">
+              <div class="ability-bar">
+                <div class="ability-box">
+                  <div class="ability-percent css">
+                    <span>60%</span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </li> -->
+          </li>
+          <li>
+            <div class="skill-text">
+              <img src="image/js.png" alt="js">
+              <div class="ability-bar">
+                <div class="ability-box">
+                  <div class="ability-percent js">
+                    <span>70%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="skill-text">
+              <img src="image/java.png" alt="java">
+              <div class="ability-bar">
+                <div class="ability-box">
+                  <div class="ability-percent java">
+                    <span>70%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section class="project">
+  <section id="project" class="project">
     <div class="inner">
       <h1 class="title">PROJECT</h1>
-      <div class="project-wrapper">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+              <div class="project-wrapper">
+                <div class="proj-img">
+                  <img src="image/work_1.jpg" alt="사진1">
+                </div>
+                <div class="proj-text">
+                  <h3>프로젝트명</h3>
+                  <ul>
+                    <li><span>개발 기간</span> 2025. 00 ~ 2025. 00</li>
+                    <li><span>개발 인원</span> 00명</li>
+                    <li><span>주요 내용</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Adipisci non porro quia dolorem vitae cupiditate ullam neque dolore dignissimos!
+                      Saepe libero perferendis magni quam aperiam nobis adipisci at labore voluptatem!</li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-wrapper">
+              <div class="proj-img">
+                <img src="image/work_2.jpg" alt="사진1">
+              </div>
+              <div class="proj-text">
+                <h3>프로젝트명</h3>
+                <ul>
+                  <li><span>개발 기간</span> 2025. 00 ~ 2025. 00</li>
+                  <li><span>개발 인원</span> 00명</li>
+                  <li><span>주요 내용</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Adipisci non porro quia dolorem vitae cupiditate ullam neque dolore dignissimos!
+                    Saepe libero perferendis magni quam aperiam nobis adipisci at labore voluptatem!</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-wrapper">
+              <div class="proj-img">
+                <img src="image/work_3.jpg" alt="사진1">
+              </div>
+              <div class="proj-text">
+                <h3>프로젝트명</h3>
+                <ul>
+                  <li><span>개발 기간</span> 2025. 00 ~ 2025. 00</li>
+                  <li><span>개발 인원</span> 00명</li>
+                  <li><span>주요 내용</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Adipisci non porro quia dolorem vitae cupiditate ullam neque dolore dignissimos!
+                    Saepe libero perferendis magni quam aperiam nobis adipisci at labore voluptatem!</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="inner">
+      <h1 class="title">CONTACT</h1>
+      <div class="contact__wrapper">
+        <p class="email"><span class="material-symbols-outlined">mail</span>Ju_An@gmail.com</p>
+        <p class="phoneNum"><span class="material-symbols-outlined">phone_enabled</span>010-0000-0000</p>
+        <p class="sns"><span class="material-symbols-outlined">mobile_chat</span>Ju_An_o_o</pc>
       </div>
     </div>
   </section>

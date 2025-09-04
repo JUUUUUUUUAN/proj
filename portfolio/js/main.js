@@ -1,16 +1,32 @@
-// 그 외 scrollreveal
-const spyEls = document.querySelectorAll('.skill .ability-bar');
-console.log(spyEls);
-// init controller
-const controller = new ScrollMagic.Controller();
+const abilityBar = document.querySelectorAll('.ability-bar');
+const contacticon = document.querySelector('.contact__wrapper');
+console.log(abilityBar);
+console.log(contacticon);
 
-spyEls.forEach(function(spyEl) {
-  // create a scene
-  new ScrollMagic.Scene({ // 감시할 장면 추가 및 옵션 지정
-    triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
-    triggerHook: 0.1 // 화면의 50% 지점에서 보여짐 여부 감시(0~1사이 지정)
+window.addEventListener('scroll', function(){
+  console.log(window.scrollY);
+  if (window.scrollY >= 700) {
+  abilityBar.forEach(function(abilityBarEl){
+    abilityBarEl.classList.add('show');
   })
-  .addClass(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
-  .addTo(controller); // 컨트롤러에 장면을 할당(필수!)
+  if(window.scrollY >= 1800){
+    contacticon.classList.add('show');
+  }
+  }
+})
 
+const swiper = new Swiper('.project .swiper', {
+  // 슬라이드 옵션 지정
+  direction: 'horizontal', // 수평 슬라이드
+  loop: true, // 반복 재생 여부, 1 -> 2 -> 3 -> 다시 1
+  // autoplay: { // 자동 재생 여부
+  //   delay : 1000 // 1초마다 슬라이드 바뀜
+  // },
+
+  // 이전/다음 슬라이드 버튼 옵션
+  navigation: {
+    nextEl: '.project .swiper-button-next',
+    prevEl: '.project .swiper-button-prev',
+  },
 });
+
